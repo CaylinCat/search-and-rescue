@@ -1,4 +1,14 @@
-
+function calculateAge(birthdayString) {
+  const birthday = new Date(birthdayString);
+  const today = new Date();
+  let age = today.getFullYear() - birthday.getFullYear();
+  const hasBirthdayPassed = today.getMonth() > birthday.getMonth() ||
+    (today.getMonth() === birthday.getMonth() && today.getDate() >= birthday.getDate());
+  if (!hasBirthdayPassed) {
+      age--;
+  }
+  return age;
+}
 
 function test_func(){
   return "hello";
@@ -8,6 +18,7 @@ async function CSVParser() {
 
   const response = await fetch("./data_cases.csv");
   const data = await response.text();
+  const parsedData = [];
 
   //console.log(response, data);
 
@@ -15,9 +26,8 @@ async function CSVParser() {
   rows.forEach(element => {
     const row = element.split(',');
     const childid = row[0];
-    const childfirstname = row[1];
-    const childlastname = row[2];
-    const birthdate = row[3];
+    const name = row[1] + " " + row[2];
+    const age = calculateAge(row[3]);
     const sex = row[4];
     const race = row[5];
     const haircolor = row[6];
@@ -25,7 +35,7 @@ async function CSVParser() {
     const height = row[8];
     const weight = row[9];
     const missingreporteddate = row[10];
-    const missingfromdate = row[11];
+    const date = row[11];
     const missingfromcity = row[12];
     const missingfromstate = row[13];
     const missingfromcountry = row[14];
@@ -37,10 +47,13 @@ async function CSVParser() {
       missingreporteddate,missingfromdate,missingfromcity,missingfromstate,missingfromcountry,ncmeccasenumber,
       casetype,postercontact,posterurl);
     */
+
+    parsedData.push({ name, age, date });
     
   });
-  return rows;
+  return parsedData;
 }
+
 
 module.exports= {
   test_func,

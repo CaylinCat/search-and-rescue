@@ -22,6 +22,8 @@ const cards = [
     { imageUrl: 'image3.jpg', name: 'Eugene Dee', age: 7, date: '2022-03-01' },
 ];
 
+console.log(cards);
+
 const SearchPage = () => (
   <div>
     <h2>Search Beep Boop</h2>
