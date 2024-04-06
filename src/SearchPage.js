@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Display from './Display';
 
+// Loads in data set :)
+const utility = require("./csv_parser");
+let data_set = utility.CSVParser();
+console.log(data_set);
+
 const cards = [
     { imageUrl: 'image1.jpg', name: 'John Doe', age: 25, date: '2024-04-06' },
     { imageUrl: 'image2.jpg', name: 'Jane Smith', age: 30, date: '2024-04-05' },
