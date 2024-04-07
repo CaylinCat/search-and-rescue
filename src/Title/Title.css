@@ -1,0 +1,132 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  /* banner */
+  .logo {
+    color: #FFF;
+    font-family: Papyrus, fantasy; 
+    font-size: 3cqmin;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .menu-toggle {
+    color: white;
+    font-size: 5cqmin;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* background */
+  .background {
+    background-image: url('https://www.popsci.com/uploads/2020/11/05/HXVTGQHICVGY7LPV25P2QMETWU.jpg?auto=webp&width=1440&height=1080'); 
+    background-color: #0d4f75;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* title */
+  .title-container {
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    color: #fff;
+    font-size: 36px;
+  }
+  
+  /* button */
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    font-family: Papyrus, fantasy; 
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    padding: 5cqmax 4cqmax;
+    margin: 0 3cqmax;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button img {
+    width: 15cqmin;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .button:hover {
+    transform: translateY(-5px);
+    background-color: #000;
+    color: #FFD700;
+  }
+  
+  .title {
+    font-family: Papyrus, fantasy; 
+    font-size: 7cqmax; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+  }
+
+  .title, .button {
+    opacity: 0;
+    animation: floatUp 4s ease forwards;
+    animation-delay: 0.5s; /* Delay button animation slightly */
+  }
+  
+  /* Specific styles for each button */
+.search {
+  background-color: rgba(165, 246, 212, 0.776);
+  background-size: cover;
+  font-size: 3cqmin;
+}
+
+.mission {
+  background-color: rgb(255, 240, 103);
+  font-size: 3.5cqmin;
+}
+
+.contact {
+  background-color: rgb(172, 222, 255);
+  background-size: cover;
+  font-size: 3cqmin;
+}
+  
+  @keyframes floatUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px); /* Start position at the bottom */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Float up to original position */
+    }
+  }
+
+  
