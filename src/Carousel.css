@@ -8,6 +8,7 @@
     filter: blur(0.2px);
     z-index: 0;
     height: 100%;
+    transition: all 0.3s ease;
 }
 
 .card img {
@@ -23,7 +24,7 @@
 
 .slick-center .card {
     transform: scale(1.4);
-    transition: transform 0.5s;
+    transition: all 0.3s ease;
     background-color: #ffe6cc;
     filter: blur(0px);
     height: auto; /* Set height to auto */
@@ -42,4 +43,21 @@
     transition: transform 0.5s;
     z-index: 1;
     height: auto; /* Set height to auto */
+}
+
+.active-card {
+    transform: scale(1.5); /* Change the scale as desired */
+    transition: transform 0.5s;
+    z-index: 1;
+}
+
+.slick-slide .card {
+    max-height: none !important;
+    height: auto;
+    padding: 40px 20px;
+    color: #3d1f00;
+}
+
+.bob {
+    color: #3d1f00;
 }
