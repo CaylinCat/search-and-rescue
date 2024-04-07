@@ -10,7 +10,7 @@ console.log(data_set);
 
 const SearchPage = () => (
   <div className='searchbody'>
-    <h2 className='searchboy'>Search Beep Boop</h2>
+    <h2 className='searchboy'>Search for Missing Kids🏊‍♂️</h2>
     <Display cards={data_set} />
   </div>
 );

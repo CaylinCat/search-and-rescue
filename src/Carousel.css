@@ -7,6 +7,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     filter: blur(0.2px);
     z-index: 0;
+    height: 100%;
 }
 
 .card img {
@@ -17,6 +18,7 @@
 .card-info {
     margin-top: 10px;
     text-align: left;
+    overflow: auto; /* Add overflow for long content */
 }
 
 .slick-center .card {
@@ -24,7 +26,7 @@
     transition: transform 0.5s;
     background-color: #ffe6cc;
     filter: blur(0px);
-    height: 400px;
+    height: auto; /* Set height to auto */
 }
 
 .slick-slide {
@@ -39,4 +41,5 @@
     transform: scale(1.4); 
     transition: transform 0.5s;
     z-index: 1;
+    height: auto; /* Set height to auto */
 }

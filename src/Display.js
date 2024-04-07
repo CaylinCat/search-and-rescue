@@ -6,13 +6,19 @@ function Display({ cards }) {
     const [nameFilter, setNameFilter] = useState('');
     const [minAgeFilter, setMinAgeFilter] = useState('');
     const [maxAgeFilter, setMaxAgeFilter] = useState('');
+    const [locationFilter, setLocationFilter] = useState('');
+    const [hairColorFilter, setHairColorFilter] = useState('');
+    const [eyeColorFilter, setEyeColorFilter] = useState('');
     const [visibleCards, setVisibleCards] = useState(9);
 
     const filteredCards = cards
         .filter(card =>
             card.name.toLowerCase().includes(nameFilter.toLowerCase()) &&
             (minAgeFilter === '' || card.age >= parseInt(minAgeFilter, 10)) &&
-            (maxAgeFilter === '' || card.age <= parseInt(maxAgeFilter, 10))
+            (maxAgeFilter === '' || card.age <= parseInt(maxAgeFilter, 10)) &&
+            (locationFilter === '' || card.location.toLowerCase().includes(locationFilter.toLowerCase())) &&
+            (hairColorFilter === '' || card.haircolor.toLowerCase().includes(hairColorFilter.toLowerCase())) &&
+            (eyeColorFilter === '' || card.eyecolor.toLowerCase().includes(eyeColorFilter.toLowerCase()))
         )
         .sort((a, b) => a.age - b.age)
         .slice(0, visibleCards);
@@ -32,25 +38,53 @@ function Display({ cards }) {
                 onChange={(e) => setNameFilter(e.target.value)}
             />
 
-            {/* Filter by Agegegege */}
-            <div className="age-filter">
+            {/* Filter by Age */}
+            <div className="filter-container">
                 <input
                     type="number"
                     placeholder="Min Age"
                     value={minAgeFilter}
                     onChange={(e) => setMinAgeFilter(e.target.value)}
-                    className="age-input"
+                    className="filter-input"
                 />
                 <input
                     type="number"
                     placeholder="Max Age"
                     value={maxAgeFilter}
                     onChange={(e) => setMaxAgeFilter(e.target.value)}
-                    className="age-input"
+                    className="filter-input"
                 />
+
+                {/* Location Filter */}
+                <input
+                    type="text"
+                    placeholder="Location"
+                    value={locationFilter}
+                    onChange={(e) => setLocationFilter(e.target.value)}
+                    className="filter-input"
+                />
+
+                {/* Hair Color Filter */}
+                <input
+                    type="text"
+                    placeholder="Hair color"
+                    value={hairColorFilter}
+                    onChange={(e) => setHairColorFilter(e.target.value)}
+                    className="filter-input"
+                />
+
+                {/* Eye Color Filter */}
+                <input
+                    type="text"
+                    placeholder="Eye color"
+                    value={eyeColorFilter}
+                    onChange={(e) => setEyeColorFilter(e.target.value)}
+                    className="filter-input"
+                />
+
             </div>
 
-            {/* Cardssss */}
+            {/* Cards */}
             <div className="grid-container">
                 {filteredCards.map((card, index) => (
                     <Card

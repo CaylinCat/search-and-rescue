@@ -42,22 +42,19 @@
     margin: 5px 0;
 }
 
-.age-filter {
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.age-input {
+.filter-input {
     margin: 0 10px;
     padding: 8px;
-    width: 100px;
+    width: 150px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
 }
 
 /* Styling for the Load More button */
