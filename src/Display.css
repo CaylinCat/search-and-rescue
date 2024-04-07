@@ -8,6 +8,7 @@
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px; /* Adjust font size */
 }
 
 .grid-container {
@@ -39,4 +40,42 @@
 
 .card-info p {
     margin: 5px 0;
+}
+
+.age-filter {
+    margin-bottom: 20px; /* Add some space below the age filters */
+}
+
+.age-input {
+    margin: 0 10px; /* Add some space between the min and max age inputs */
+    padding: 8px; /* Adjust padding */
+    width: 100px; /* Adjust width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    grid-gap: 20px; /* spacing between cards */
+}
+
+/* Styling for the Load More button */
+button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+button:disabled {
+    background-color: #ccc; /* Disabled button background color */
+    cursor: not-allowed;
 }

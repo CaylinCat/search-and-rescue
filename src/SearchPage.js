@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Display from './Display';
+import './SearchPage.css';
 import { CSVParser } from './csv_parser.js';
 
 // Loads in data set :)
