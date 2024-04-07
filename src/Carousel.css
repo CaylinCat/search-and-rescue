@@ -35,8 +35,8 @@
 }
 
 .middle-card {
-    background-color: #ffe6cc; /* Different background color for the middle card */
-    transform: scale(1.4); /* Make the middle card bigger */
-    transition: transform 0.5s; /* Add a transition for smooth scaling */
+    background-color: #ffe6cc; 
+    transform: scale(1.4); 
+    transition: transform 0.5s;
     z-index: 1;
 }

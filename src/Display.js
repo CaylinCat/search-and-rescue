@@ -15,7 +15,7 @@ function Display({ cards }) {
             (maxAgeFilter === '' || card.age <= parseInt(maxAgeFilter, 10))
         )
         .sort((a, b) => a.age - b.age)
-        .slice(0, visibleCards); // Slice to display only the visible cards
+        .slice(0, visibleCards);
 
     const loadMoreCards = () => {
         setVisibleCards(prevVisibleCards => prevVisibleCards + 9);
@@ -32,7 +32,7 @@ function Display({ cards }) {
                 onChange={(e) => setNameFilter(e.target.value)}
             />
 
-            {/* Filter by Age (Min and Max Age Inputs) */}
+            {/* Filter by Agegegege */}
             <div className="age-filter">
                 <input
                     type="number"
@@ -50,7 +50,7 @@ function Display({ cards }) {
                 />
             </div>
 
-            {/* Grid of Cards */}
+            {/* Cardssss */}
             <div className="grid-container">
                 {filteredCards.map((card, index) => (
                     <Card

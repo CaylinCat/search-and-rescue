@@ -1,41 +1,41 @@
-/* Body styles */
+/* Body*/
 body {
     margin: 0;
     color: #A46E39;
     font-family: 'Pirata One', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif; /* Pirate-themed font with fallbacks */
+      sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header styles */
+/* Header */
 h2 {
     color: #8B572A;
     text-align: center;
 }
 
-    /* Card styles */
+/* Card */
 .card {
     background-color: #C7A252;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* White box shadow */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05);
 }
 
-/* Link styles */
+/* Link */
 .link {
     text-decoration: none;
-    color: #54a78c; /* Greenish link color */
+    color: #54a78c;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .link:hover {
-    color: #73ac58; /* Light greenish color on hover */
+    color: #73ac58;
 }

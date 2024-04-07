@@ -8,13 +8,13 @@
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px; /* Adjust font size */
+    font-size: 16px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    grid-gap: 20px; /* spacing between cards */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 .card {
@@ -43,27 +43,27 @@
 }
 
 .age-filter {
-    margin-bottom: 20px; /* Add some space below the age filters */
+    margin-bottom: 20px;
 }
 
 .age-input {
-    margin: 0 10px; /* Add some space between the min and max age inputs */
-    padding: 8px; /* Adjust padding */
-    width: 100px; /* Adjust width */
+    margin: 0 10px;
+    padding: 8px;
+    width: 100px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    grid-gap: 20px; /* spacing between cards */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 /* Styling for the Load More button */
 button {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Text color */
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -72,10 +72,10 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
+    background-color: #0056b3;
 }
 
 button:disabled {
-    background-color: #ccc; /* Disabled button background color */
+    background-color: #ccc;
     cursor: not-allowed;
 }

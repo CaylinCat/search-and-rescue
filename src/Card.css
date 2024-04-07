@@ -1,16 +1,16 @@
 .card {
     display: flex;
-    flex-direction: column; /* Change direction to column */
-    align-items: flex-start; /* Align items to start */
+    flex-direction: column;
+    align-items: flex-start;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease;
-    max-height: 100px; /* Set max height */
-    overflow: hidden; /* Hide overflow */
-    margin-bottom: 10px; /* Add margin between cards */
+    max-height: 100px;
+    overflow: hidden;
+    margin-bottom: 10px;
   }
   
   .card:hover {
@@ -18,6 +18,6 @@
   }
   
   .card.expanded {
-    max-height: none; /* Remove max height on expand */
-    overflow: auto; /* Allow overflow when expanded */
+    max-height: none;
+    overflow: auto;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Title.css'; // Import CSS file for styles
+import './Title.css';
 
 const Title = () => {
   return (
@@ -9,6 +9,7 @@ const Title = () => {
       <div className="menu-toggle">&#9776;</div>
       <div className="title-container">
         <h1 className="title">Find Your Own Treasure!</h1>
+        <h2 className="subtitle">Help rescue missing children in America</h2>
       </div>
       <div className="button-container">
         <a href="/search" className="button search" data-tooltip="Search for missing children in the database"><img src="search_image.png" alt="Search" />Search</a>
