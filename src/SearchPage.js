@@ -4,7 +4,7 @@ import Display from './Display';
 
 // Loads in data set :)
 const utility = require("./csv_parser");
-let data_set = utility.CSVParser();
+let data_set = await utility.CSVParser();
 console.log(data_set);
 
 const cards = [
@@ -27,7 +27,7 @@ console.log(cards);
 const SearchPage = () => (
   <div>
     <h2>Search Beep Boop</h2>
-    <Display cards={cards} />
+    <Display cards={data_set} />
   </div>
 );
 
