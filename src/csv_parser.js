@@ -10,10 +10,6 @@ function calculateAge(birthdayString) {
   return age;
 }
 
-function test_func(){
-  return "hello";
-}
-
 async function CSVParser() {
 
   const response = await fetch("./data_cases.csv");
@@ -35,7 +31,8 @@ async function CSVParser() {
     const height = row[8];
     const weight = row[9];
     const missingreporteddate = row[10];
-    const date = row[11];
+    //const date = row[11];
+    let date = row[11].trim();
     const missingfromcity = row[12];
     const missingfromstate = row[13];
     const missingfromcountry = row[14];
@@ -48,6 +45,20 @@ async function CSVParser() {
       casetype,postercontact,posterurl);
     */
 
+    // Remove time if it's '0:00'
+    if (date.endsWith(' 0:00')) {
+        date = date.replace(' 0:00', '');
+    }
+
+    // Check if year part needs conversion
+    const yearPart = date.split('/')[2].substring(0, 2);
+    const year = parseInt(yearPart);
+    if (year >= 40) {
+        date = date.replace(yearPart, '19' + yearPart);
+    } else {
+        date = date.replace(yearPart, '20' + yearPart);
+    }
+
     parsedData.push({ name, age, date });
     
   });
@@ -56,7 +67,6 @@ async function CSVParser() {
 
 
 module.exports= {
-  test_func,
   CSVParser
 };
 //module.exports.CSVParser=CSVParser();
