@@ -42,11 +42,25 @@ body, html {
   .title-container {
     margin-bottom: 20px;
     margin-top: 50px;
+    font-family: Papyrus, fantasy; 
   }
-  
+
   .title {
-    color: #fff;
-    font-size: 36px;
+    font-size: 7cqmax; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+  }
+
+  .subtitle {
+    font-size: 3cqmax; 
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6), 0 0 40px rgba(255, 255, 0, 0.4), 0 0 50px rgba(255, 255, 0, 0.2);
+
   }
   
   /* button */
@@ -83,19 +97,26 @@ body, html {
     color: #FFD700;
   }
   
-  .title {
-    font-family: Papyrus, fantasy; 
-    font-size: 7cqmax; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 26.4px;
-    color: #FFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 50px;
+  .button::before {
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 2cqb;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+    color: #fff;
+    
+    opacity: 0;
+    transition: opacity 0.3s;
   }
-
-  .title, .button {
+  
+  .button:hover::before {
+    opacity: 1;
+  }
+  
+  .title-container, .button {
     opacity: 0;
     animation: floatUp 4s ease forwards;
     animation-delay: 0.5s; /* Delay button animation slightly */
