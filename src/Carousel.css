@@ -1,0 +1,42 @@
+.card {
+    padding: 20px;
+    text-align: center;
+    background-color: #C7A252;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: blur(0.2px);
+    z-index: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-info {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.slick-center .card {
+    transform: scale(1.4);
+    transition: transform 0.5s;
+    background-color: #ffe6cc;
+    filter: blur(0px);
+    height: 400px;
+}
+
+.slick-slide {
+    transition: transform 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middle-card {
+    background-color: #ffe6cc; /* Different background color for the middle card */
+    transform: scale(1.4); /* Make the middle card bigger */
+    transition: transform 0.5s; /* Add a transition for smooth scaling */
+    z-index: 1;
+}

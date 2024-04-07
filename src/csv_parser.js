@@ -36,9 +36,7 @@ async function CSVParser() {
     const missingreporteddate = row[10];
     //const date = row[11];
     let date = row[11].trim();
-    const missingfromcity = row[12];
-    const missingfromstate = row[13];
-    const missingfromcountry = row[14];
+    const location = row[12] + ", " + row[13];
     const ncmeccasenumber = row[15];
     const casetype = row[16];
     const postercontact = row[17];
@@ -62,7 +60,7 @@ async function CSVParser() {
         date = date.replace(yearPart, '20' + yearPart);
     }
 
-    parsedData.push({ name, age, date });
+    parsedData.push({ name, age, date, location, sex, race, haircolor, eyecolor });
     
   });
   return parsedData;
