@@ -11,9 +11,9 @@ const Title = () => {
         <h1 className="title">Find Your Own Treasure!</h1>
       </div>
       <div className="button-container">
-        <a href="/search" className="button search"><img src="search_image.png" alt="Search" />Search</a>
-        <a href="/game" className="button mission"><img src="mission_image.png" alt="Mission" /><b>Mission</b></a>
-        <button onClick={() => window.open('mailto:info@ncmec.org')} className="button contact"><img src="contact_image.png" alt="Contact" />Contact</button>
+        <a href="/search" className="button search" data-tooltip="Search for missing children in the database"><img src="search_image.png" alt="Search" />Search</a>
+        <a href="/game" className="button mission" data-tooltip="Embark on a mission of missing children around you"><img src="mission_image.png" alt="Mission" /><b>Mission</b></a>
+        <button onClick={() => window.open('mailto:info@ncmec.org')} className="button contact" data-tooltip="Contact us for assistance or inquiries."><img src="contact_image.png" alt="Contact" />Contact</button>
       </div>
     </div>
   );

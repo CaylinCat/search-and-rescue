@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Card.css"; // Import CSS file for styles
 
-class Card extends React.Component {
-    render() {
-        return (
-            <div className="card">
-                {/* <img src={this.props.imageUrl} alt="Avatar" className="card-image" /> */}
-                <div className="card-info">
-                    <h2>{this.props.name}</h2>
-                    <p>Age: {this.props.age}</p>
-                    <p>Date: {this.props.date}</p>
-                </div>
-            </div>
-        );
-    }
+function Card(props) {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpand = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <div className={`card ${expanded ? 'expanded' : ''}`} onClick={handleExpand}>
+      {/* <img src={props.imageUrl} alt="Avatar" className="card-image" /> */}
+      <div className="card-info">
+        <h2>{props.name}</h2>
+        <p>Age: {props.age}</p>
+        <p>Location: {props.location}</p>
+        <p>Haircolor: {props.haircolor}</p>
+        <p>Eyecolor: {props.eyecolor}</p>
+        {expanded && <p>Date: {props.date}</p>}
+        {expanded && <p>Sex: {props.sex}</p>}
+        {expanded && <p>Race: {props.race}</p>}
+      </div>
+    </div>
+  );
 }
 
 export default Card;

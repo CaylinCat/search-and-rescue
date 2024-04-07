@@ -59,6 +59,11 @@ function Display({ cards }) {
                         name={card.name}
                         age={card.age}
                         date={card.date}
+                        location={card.location}
+                        sex={card.sex}
+                        race={card.race}
+                        haircolor={card.haircolor}
+                        eyecolor={card.eyecolor}
                     />
                 ))}
             </div>
