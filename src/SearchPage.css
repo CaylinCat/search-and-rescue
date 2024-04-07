@@ -23,19 +23,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Card */
-.card {
-    background-color: #8B572A; /* Changed to match Title.css button color */
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
 /* Link */
 .link {
     text-decoration: none;
