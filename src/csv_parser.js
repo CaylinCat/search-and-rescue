@@ -2,6 +2,9 @@ function calculateAge(birthdayString) {
   const birthday = new Date(birthdayString);
   const today = new Date();
   let age = today.getFullYear() - birthday.getFullYear();
+  if (age < 0) {
+    age = birthday.getFullYear - today.getFullYear();
+  }
   const hasBirthdayPassed = today.getMonth() > birthday.getMonth() ||
     (today.getMonth() === birthday.getMonth() && today.getDate() >= birthday.getDate());
   if (!hasBirthdayPassed) {

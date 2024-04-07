@@ -14,6 +14,7 @@ function Display({ cards }) {
             (minAgeFilter === '' || card.age >= parseInt(minAgeFilter, 10)) &&
             (maxAgeFilter === '' || card.age <= parseInt(maxAgeFilter, 10))
         )
+        .sort((a, b) => a.age - b.age)
         .slice(0, visibleCards); // Slice to display only the visible cards
 
     const loadMoreCards = () => {
